@@ -10,5 +10,11 @@ public class FormController {
 		
 		return "form/keijiban";
 	}
+	
+	@RequestMapping("/form")
+	public String requestform(Form form1) {
+		
+		return "form/input";
+	}
 
 }
