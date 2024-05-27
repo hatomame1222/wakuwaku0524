@@ -5,10 +5,41 @@
 <meta charset="utf-8" />
 </head>
 <body>
-<h1 th:text="${title}"></h1>
-<form method="get" action="#">
-<p>名前：<input type="text" name="name1"></p>
-<input type="submit" value="送信">
+<h1 th:text="${title}" class="contact-title"></h1>
+ <form action="#" method="post">
+    <table class="contact-table">
+        <tr>
+            <th class="contact-item">名前</th>
+            <td class="contact-body">
+                <input type="text" name="名前" class="form-text">
+            </td>
+        </tr>
+        <tr>
+            <th class="contact-item">メールアドレス</th>
+            <td class="contact-body">
+                <input type="text" name="メールアドレス" class="form-text">
+            </td>
+        </tr>
+        <tr>
+            <th class="contact-item">入部希望部活名</th>
+            <td class="contact-body">
+                <select>
+                    <option value="karaoke">カラオケ部</option>
+                    <option value="riddle">謎解き部</option>
+                    <option value="basketball">バスケットボール部</option>
+                    <option value="football">フットボール部</option>
+                    <option value="boardgame">ボードゲーム</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="contact-item">コメント</th>
+            <td class="contact-body">
+                <textarea name="コメント" class="form-textarea"></textarea>
+            </td>  
+        </tr>
+    </table>
 </form>
+<input class="contact-submit" type="submit" value="送信">
 </body>
 </html>
