@@ -5,14 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class FormController {
-
-	@RequestMapping("/form")
-	public String form(Form form) {
-		
-		return "form/input";
-	}
-
-	@RequestMapping("/keijiban")
+	@RequestMapping("/")
 	public String keijiban(Form form) {
 		
 		return "form/keijiban";
