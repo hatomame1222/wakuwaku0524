@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FormController {
 
 	@RequestMapping("/form")
-	public String form(Model model) {
-		model.addAttribute("title","入部申し込みフォーム");
+	public String form(Form form) {
+		
 		return "form/input";
+	}
 
 	@RequestMapping("/keijiban")
 	public String keijiban(Form form) {
