@@ -1,13 +1,6 @@
 package com.example.demo.form;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -24,22 +17,13 @@ public class FormController {
 		
 		return "form/input";
 	}
+
+	@RequestMapping("/top")
+	public String top1(Form form2) {
 	
-	
-	 private List<String> posts = new ArrayList<>();
-	 @RequestMapping("/post")
-
-	    @GetMapping("/")
-	    public String index(Model model) {
-	        model.addAttribute("posts", posts);
-	        return "index";
-	    }
-
-	    @PostMapping("/post")
-	    public String addPost(Post post) {
-	        post.setCreatedAt(LocalDateTime.now());
-	        post.add(post);
-	        return "redirect:/";
-	    }
-
+		return "form/top1";
+		
+	}
 }
+	
+	
