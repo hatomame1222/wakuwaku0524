@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class FormController {
-	@RequestMapping("/")
+	@RequestMapping("/keijiban")
 	public String keijiban(Form form) {
 		
 		return "form/keijiban";
