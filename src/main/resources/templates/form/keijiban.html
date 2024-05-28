@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
+	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>部活動ページ</title>
 	<link href="style2.css" rel="stylesheet" type="text/css">
 	
-    <style>  
-  
-
-    </style>
 </head>
 <body>
         <section>
         <header>
-            <h1>謎解き部</h1>
-            <img src="/images/nazotoki.jpg" width="948" height="340"alt="謎解き部">
+			<!-- 戻るボタン -->
+			<a href="#" class="back-button">戻る</a>
+			<!-- ロゴの写真 -->
+			<img src="logo.jpg" alt="サイトのロゴ">
+			
+			 
+			<div class="search-container">
+			     <form action="/search" method="get">
+			         <input type="text" placeholder="検索..." name="q">
+			         <button type="submit">検索</button>
+			     </form>
+			 </div>
+			 <h1>謎解き部</h1>
+			 <img src="/images/nazotoki.jpg" width="948" height="340"alt="謎解き部">
         </header>
             <h2>部活の紹介</h2>
             <p>謎解き部です。謎解き部では現在毎月の開催を目標に活動しています。具体的な活動は・・・</p>
@@ -25,23 +34,29 @@
 
             <h2>活動場所</h2>
             <p>活動場所をここに入力</p>
+			
+			<div class="gmap">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1362.5128186665395!2d139.73480808667932!3d35.68636070363882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c63c3955555%3A0xccd3a5172874bd51!2z44ix44K744OW44OzJuOCouOCpO-9peODjeODg-ODiOODoeODh-OCo-OCog!5e0!3m2!1sja!2sjp!4v1716794721317!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
 
             <h2>お問い合わせ先</h2>
             <p>お問い合わせ先をここに入力</p>
         </section>
-    <section>
-        <h2>申し込みフォーム</h2>
-        <p>申し込みフォームへのリンク:</p>
-        <a href="申し込みフォームのリンクURL" target="_blank">申し込みフォームへ</a>
-    </section>
-    <section>
-        <h2>コメント欄</h2>
-        <form action="#" method="post">
-            <textarea name="comment" id="comment" cols="30" rows="5" placeholder="コメントを入力してください"></textarea>
-            <br>
-            <input type="submit" value="コメントする">
-        </form>
-    </section>
+		
+	    <section>
+	        <h2>申し込みフォーム</h2>
+	        <p>申し込みフォームへのリンク:</p>
+	        <a href="/form" target="_blank">申し込みフォームへ</a>   
+		</section>
+	
+	    <section>
+	        <h2>コメント欄</h2>
+	        <form action="#" method="post">
+	            <textarea name="comment" id="comment" cols="30" rows="5" placeholder="コメントを入力してください"></textarea>
+	            <br>
+	            <input type="submit" value="コメントする">
+	        </form>
+	    </section>
     <footer>
         <p>&copy; 2024 部活動名. All rights reserved.</p>
     </footer>
