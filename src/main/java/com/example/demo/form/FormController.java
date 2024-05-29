@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.dao.SampleDao;
@@ -51,7 +50,7 @@ public class FormController {
 		return "form/snowboard";
 	}
 	
-	@PostMapping ("/add")
+	@RequestMapping ("/add")
 	public String add(Model model,Form form){
 		EntForm entform = new EntForm();
 		entform.setName(form.getName());
@@ -83,7 +82,6 @@ public class FormController {
 	public String requestform(Form form1) {
 		return "form/input";
 	}
-
 
 	
 //			//削除(DELETE)

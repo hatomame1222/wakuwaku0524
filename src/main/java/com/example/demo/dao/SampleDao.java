@@ -40,7 +40,7 @@ public class SampleDao {
 				EntForm entformdb = new EntForm();
 
 				//id、nameのデータをentformdbに移す
-				
+				entformdb.setId((int)result1.get("id"));
 				entformdb.setName((String)result1.get("name"));
 				entformdb.setComment((String)result1.get("comment"));
 				entformdb.setDatetime((Date)result1.get("datetime"));
@@ -59,8 +59,10 @@ public class SampleDao {
 			//コンソールに表示
 			System.out.println("削除しました");
 			//DBからデータを削除
-			db.update("delete from sample where id=?", id);
-				}
+			db.update("delete from sample where id= ?", id);
+		    }
+			
+			
 			//更新画面の表示(SELECT)
 			public List<EntForm> selectOne(Long id) {
 
@@ -76,6 +78,7 @@ public class SampleDao {
 					//データ1件分を1つのまとまりとするので、EntForm型の「entformdb」を生成
 					EntForm entformdb = new EntForm();
 					//id、nameのデータをentformdbに移す
+					entformdb.setId((int)result1.get("id"));
 					entformdb.setName((String)result1.get("name"));
 					entformdb.setComment((String)result1.get("comment"));
 					entformdb.setDatetime((Date)result1.get("datetime"));

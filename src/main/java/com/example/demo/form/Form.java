@@ -9,7 +9,7 @@ public class Form {
 	private Date timestamp;
 	
 	public Form() {}
-
+	
 	public String getName() {
 		return name;
 	}
