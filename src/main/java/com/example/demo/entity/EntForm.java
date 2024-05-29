@@ -1,13 +1,13 @@
 package com.example.demo.entity;
 
-import java.time.LocalDateTime;
 
 public class EntForm {
+	
 	private String name;
-	private String content;
-	private LocalDateTime createdAt;
+	private String comment;
 	
 	public EntForm() {};
+	
 	public String getName() {
 		return name;
 	}
@@ -16,11 +16,11 @@ public class EntForm {
 		this.name=name;	
 	}
 	
-	public String getContent() {
-		return content;
+	public String getComment() {
+		return comment;
 	}
 	
-	public void setContent(String comment) {
-		this.content=comment;
+	public void setComment(String comment) {
+		this.comment=comment;
 	}
 }
