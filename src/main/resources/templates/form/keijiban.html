@@ -57,13 +57,16 @@
 			  </form>
 			  <form>
 				  <table>
-					  <tr>
-						  <th>名前</th>
-						  <th>コメント</th>
-					  </tr>
 					  <tr th:each="res: ${dbList}">
 						  <td th:text="${res.name}">名前</td>
 						  <td th:text="${res.comment}">コメント</td>
+						  <td th:text="${res.datetime}">時刻</td>
+						  <td>
+							<form th:action="@{'/del/' + ${res.id}}" method="post">
+								<input type="hidden" name="_method" value="DELETE" />
+								<input type="submit" value="削除" />
+							</form>
+						  </td>
 				  	</tr>
 				  </table>
 			  </form>
