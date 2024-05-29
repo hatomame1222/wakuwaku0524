@@ -4,7 +4,7 @@
 	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>部活動ページ</title>
+    <title>部活動</title>
 	<link href="style2.css" rel="stylesheet" type="text/css">
 	
 </head>
@@ -48,14 +48,26 @@
 	        <p>申し込みフォームへのリンク:</p>
 	        <a href="/form" target="_blank">申し込みフォームへ</a>   
 		</section>
-	
-	    <section>
-	        <h2>コメント欄</h2>
-	        <form action="#" method="post">
-	            <textarea name="comment" id="comment" cols="30" rows="5" placeholder="コメントを入力してください"></textarea>
-	            <br>
-	            <input type="submit" value="コメントする">
-	        </form>
+		<section>
+			<h2>コメント欄</h2>
+			  <form th:action="@{/add}" method="post">
+			  <p>名前：<input type="text" name="name" th:value="*{name}"></p>
+			  <p>コメント：<input type="text" name="comment" th:value="*{comment}"></p>
+			  <input type="submit" value="送信">
+			  </form>
+			  <form>
+				  <table>
+					  <tr>
+						  <th>名前</th>
+						  <th>コメント</th>
+					  </tr>
+					  <tr th:each="res: ${dbList}">
+						  <td th:text="${res.name}">名前</td>
+						  <td th:text="${res.comment}">コメント</td>
+				  	</tr>
+				  </table>
+			  </form>
+			  
 	    </section>
     <footer>
         <p>&copy; 2024 部活動名. All rights reserved.</p>
