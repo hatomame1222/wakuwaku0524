@@ -4,214 +4,253 @@
     font-weight: 400;
     font-style: normal;
   } */
-  
-h1{
-    font-family: "Zen Kurenaido", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 45px;
+  body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
 }
-   h2{
-    font-family: "Zen Kurenaido", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
-    background-color: #f1e3e3;
-   }     
-   h3{
-    font-size: 30px;
-   }
 
-    img{
-        border: none;
-        display: block;
-    }
+.gallery {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+max-width: 600px;
+width: 100%;
+padding: 10px;
+box-sizing: border-box;
+}
+
+.gallery-item {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 5px;
+overflow: hidden;
+}
+
+.gallery-item img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+.gallery {
+grid-template-columns: repeat(2, 1fr); /* スマホでも2列表示を維持 */
+}
+}
+/*h1{*/
+/*    font-family: "Zen Kurenaido", sans-serif;*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*    font-size: 45px;*/
+/*}*/
+/*   h2{*/
+/*    font-family: "Zen Kurenaido", sans-serif;*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*    font-size: 30px;*/
+/*    background-color: #f1e3e3;*/
+/*   }     */
+/*   h3{*/
+/*    font-size: 30px;*/
+/*   }*/
+
+/*    img{*/
+/*        border: none;*/
+/*        display: block;*/
+/*    }*/
     
-    h1,h2,h3{
-        margin: 0;
-    }
+/*    h1,h2,h3{*/
+/*        margin: 0;*/
+/*    }*/
    
-    body {
-    font-size: 20px;
-    line-height: 1.7;
-    color: #362e2b;
-    background-color: rgb(208, 209, 219); /* 透明度を含む背景色 */
-    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic", sans-serif;
-}
+/*    body {*/
+/*    font-size: 20px;*/
+/*    line-height: 1.7;*/
+/*    color: #362e2b;*/
+/*    background-color: rgb(208, 209, 219);  透明度を含む背景色 */
+/*    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic", sans-serif;*/
+/*}*/
 
     
-    .search-container {
-        float: right;
-      }
-      .search-container input[type=text] {
-        padding: 6px;
-        margin-top: 8px;
-        font-size: 17px;
-        border: none;
-      }
-      .search-container button {
-        padding: 6px 10px;
-        margin-top: 8px;
-        margin-right: 16px;
-        background: #ddd;
-        font-size: 17px;
-        border: none;
-        cursor: pointer;
-      }
-      .search-container button:hover {
-        background: #ccc;
-      }
+/*    .search-container {*/
+/*        float: right;*/
+/*      }*/
+/*      .search-container input[type=text] {*/
+/*        padding: 6px;*/
+/*        margin-top: 8px;*/
+/*        font-size: 17px;*/
+/*        border: none;*/
+/*      }*/
+/*      .search-container button {*/
+/*        padding: 6px 10px;*/
+/*        margin-top: 8px;*/
+/*        margin-right: 16px;*/
+/*        background: #ddd;*/
+/*        font-size: 17px;*/
+/*        border: none;*/
+/*        cursor: pointer;*/
+/*      }*/
+/*      .search-container button:hover {*/
+/*        background: #ccc;*/
+/*      }*/
       
-    .search-container{
-        float: right;
+/*    .search-container{*/
+/*        float: right;*/
 
-    }
+/*    }*/
 
-    header {
-        background-color: rgba(122, 122, 226, 0.5);
-    }
+/*    header {*/
+/*        background-color: rgba(122, 122, 226, 0.5);*/
+/*    }*/
     
-    input[type="text"] {
-        float: right;
-    }
-    input[type="image"] {
-        float: right;
-    }
+/*    input[type="text"] {*/
+/*        float: right;*/
+/*    }*/
+/*    input[type="image"] {*/
+/*        float: right;*/
+/*    }*/
     
     
-    .media-item{
-            width: 150px;
-            height: 150px;
-            object-fit: cover; /* 画像を正方形に維持するために追加 */
+/*    .media-item{*/
+/*            width: 150px;*/
+/*            height: 150px;*/
+/*            object-fit: cover;  画像を正方形に維持するために追加 */
 
-        margin-left: auto;
-        margin-right: auto;
-            margin-left: 0; /* 左詰め */
-            margin-right: auto;
+/*        margin-left: auto;*/
+/*        margin-right: auto;*/
+/*            margin-left: 0;  左詰め */
+/*            margin-right: auto;*/
         
-    }
+/*    }*/
 
-    .section{
-        color: #362e2b;
-    }
-    .component-cards{
-        color: #362e2b;
-    }
-    .card{
-        color: #362e2b;
-        display: flex;
-        font-size: 15px;
+/*    .section{*/
+/*        color: #362e2b;*/
+/*    }*/
+/*    .component-cards{*/
+/*        color: #362e2b;*/
+/*    }*/
+/*    .card{*/
+/*        color: #362e2b;*/
+/*        display: flex;*/
+/*        font-size: 15px;*/
         
-    }
+/*    }*/
 
-    .image{
-        color: #362e2b;
-    }
-    .card-container {
-        display: flex;
-        flex-wrap: wrap; /* 必要に応じて折り返し */
-    }
+/*    .image{*/
+/*        color: #362e2b;*/
+/*    }*/
+/*    .card-container {*/
+/*        display: flex;*/
+/*        flex-wrap: wrap;  必要に応じて折り返し */
+/*    }*/
     
-    .card {
-        flex: 100px; /* フレックスアイテムの伸縮と最小・最大幅を指定 */
-        margin: 10px; /* カード間の間隔を調整 */
+/*    .card {*/
+/*        flex: 100px;  フレックスアイテムの伸縮と最小・最大幅を指定 */
+/*        margin: 10px;  カード間の間隔を調整 */
         
-    }
+/*    }*/
     
-    /* 以下、画像とタイトルのスタイル */
-    .image {
-        position: relative; /* 相対位置 */
-        width: 75%; /* 画像の幅を親要素に合わせる */
-    }
+/*     以下、画像とタイトルのスタイル */
+/*    .image {*/
+/*        position: relative;  相対位置 */
+/*        width: 75%;  画像の幅を親要素に合わせる */
+/*    }*/
     
-    .media-item {
-        width: 75%; /* 画像の幅を親要素に合わせる */
-        height: auto; /* オリジナルの縦横比を維持 */
-    }
+/*    .media-item {*/
+/*        width: 75%;  画像の幅を親要素に合わせる */
+/*        height: auto;  オリジナルの縦横比を維持 */
+/*    }*/
     
   
     
- table {
-        width: 100%;
-        border-collapse: collapse;
-        color: #362e2b;
-        background-color: #f1e3e3;
-    }
-    th, td {
-        border: 1px solid #524d4d;
-        padding: 8px;
-        text-align: center;
-        background-color: #f1e3e3;
-    }
-    th {
-        background-color: #f2f2f2;
+/* table {*/
+/*        width: 100%;*/
+/*        border-collapse: collapse;*/
+/*        color: #362e2b;*/
+/*        background-color: #f1e3e3;*/
+/*    }*/
+/*    th, td {*/
+/*        border: 1px solid #524d4d;*/
+/*        padding: 8px;*/
+/*        text-align: center;*/
+/*        background-color: #f1e3e3;*/
+/*    }*/
+/*    th {*/
+/*        background-color: #f2f2f2;*/
         
-    }
-    ;
+/*    }*/
+/*    ;*/
 
- .overlay-text {
-    position: absolute; /* 絶対位置 */
-    bottom: 0; /* 下端に配置 */
-    left: 0; /* 左端に配置 */
-    width: 100%; /* 幅を100%に */
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景色 */
-    color: white; /* テキスト色 */
-    padding: 10px; /* パディング */
-    text-align: center; /* テキストを中央揃え */
-    font-weight: bold; /* 太字 */
-    font-size: 18px; /* フォントサイズ */
-    box-sizing: border-box; /* paddingが幅に含まれるように */
-    z-index: 1; /* 画像よりも上に配置 */
-    transform: translate(-50%, -50%); /* 中央揃え */
-    text-shadow: 100px 100px 40px rgba(0, 0, 0, 0.5); /* テキストに影を付ける */
-}
+/* .overlay-text {*/
+/*    position: absolute;  絶対位置 */
+/*    bottom: 0;  下端に配置 */
+/*    left: 0;  左端に配置 */
+/*    width: 100%;  幅を100%に */
+/*    background-color: rgba(0, 0, 0, 0.5);  半透明の背景色 */
+/*    color: white;  テキスト色 */
+/*    padding: 10px;  パディング */
+/*    text-align: center;  テキストを中央揃え */
+/*    font-weight: bold;  太字 */
+/*    font-size: 18px;  フォントサイズ */
+/*    box-sizing: border-box;  paddingが幅に含まれるように */
+/*    z-index: 1;  画像よりも上に配置 */
+/*    transform: translate(-50%, -50%);  中央揃え */
+/*    text-shadow: 100px 100px 40px rgba(0, 0, 0, 0.5);  テキストに影を付ける */
+/*}*/
 
-    .media-title {
-        position: absolute;
-        bottom: 10px; /* 下部からの位置調整 */
-        left: 10px; /* 左部からの位置調整 */
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            white-space: nowrap; /* テキストを一行で折り返さないように */
-            overflow: hidden; /* 内容がはみ出た場合は表示しない */
-            text-overflow: ellipsis; /* 内容がはみ出た場合は省略記号で表示 */
-            /* その他のスタイル */
-        }
+/*    .media-title {*/
+/*        position: absolute;*/
+/*        bottom: 10px;  下部からの位置調整 */
+/*        left: 10px;  左部からの位置調整 */
+/*        color: white;*/
+/*        font-size: 18px;*/
+/*        font-weight: bold;*/
+/*        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
+/*            white-space: nowrap;  テキストを一行で折り返さないように */
+/*            overflow: hidden;  内容がはみ出た場合は表示しない */
+/*            text-overflow: ellipsis;  内容がはみ出た場合は省略記号で表示 */
+/*             その他のスタイル */
+/*        }*/
         
-        .card-container {
-            display: flex; /* カードを横並びにする */
-            flex-wrap: wrap; /* カードが行を超えた場合に折り返す */
-            justify-content: space-between; /* カードを左右に均等に配置 */
-            max-width: 100%; /* 画像の幅が親要素に合わせて調整される */
-            height: auto; /* アスペクト比を保持しつつ、高さは自動調整される */
+/*        .card-container {*/
+/*            display: flex;  カードを横並びにする */
+/*            flex-wrap: wrap;  カードが行を超えた場合に折り返す */
+/*            justify-content: space-between;  カードを左右に均等に配置 */
+/*            max-width: 100%;  画像の幅が親要素に合わせて調整される */
+/*            height: auto;  アスペクト比を保持しつつ、高さは自動調整される */
             
             
-        }
+/*        }*/
       
-.card {
-    position: relative; /* 相対位置 */
-}
+/*.card {*/
+/*    position: relative;  相対位置 */
+/*}*/
 
 
         
        
             
-  /* スマートフォンサイズ以下の場合に幅を100%に設定 */
-@media (max-width: 768px) {
-    selector {
-        width: 100%;
-    }
-}
+/*   スマートフォンサイズ以下の場合に幅を100%に設定 */
+/*@media (max-width: 768px) {*/
+/*    selector {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
 
-.media {
-    position: relative; /* 相対位置 */
-}
+/*.media {*/
+/*    position: relative;  相対位置 */
+/*}*/
 
-a{
-    display: block;
-}
+/*a{*/
+/*    display: block;*/
+/*}*/
 /* カレンダー全体のスタイル */
 #calendar {
     width: 100%;
