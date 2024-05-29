@@ -62,10 +62,7 @@ h1{
         background: #ccc;
       }
       
-    .search-container{
-        float: right;
-
-    }
+    
 
     header {
         background-color: rgba(122, 122, 226, 0.5);
@@ -74,14 +71,10 @@ h1{
     input[type="text"] {
         float: right;
     }
-    input[type="image"] {
-        float: right;
-    }
-    
-    
+   
     .media-item{
-            width: 150px;
-            height: 150px;
+            width: 75%; /* 画像の幅を親要素に合わせる */
+        height: auto; /* オリジナルの縦横比を維持 */
             object-fit: cover; /* 画像を正方形に維持するために追加 */
 
         margin-left: auto;
@@ -101,33 +94,33 @@ h1{
         color: #362e2b;
         display: flex;
         font-size: 15px;
-        
-    }
+        flex: 100px; /* フレックスアイテムの伸縮と最小・最大幅を指定 */
+        margin: 10px; /* カード間の間隔を調整 */
+    position: relative; /* 相対位置 */
+   
+    display: inline-block; /* インラインブロック要素に変更 */
+    margin-right: -4px; /* 右側の余白を調整 */
+}
+     
+ 
 
     .image{
         color: #362e2b;
-    }
-    .card-container {
-        display: flex;
-        flex-wrap: wrap; /* 必要に応じて折り返し */
-    }
+         position: relative; /* 相対位置 */
+        width: 75%; /* 画像の幅を親要素に合わせる */
+    position: relative;
+    color: #362e2b;
+    width: 75%;
+}
+
+   
     
-    .card {
-        flex: 100px; /* フレックスアイテムの伸縮と最小・最大幅を指定 */
-        margin: 10px; /* カード間の間隔を調整 */
-        
-    }
+    
     
     /* 以下、画像とタイトルのスタイル */
-    .image {
-        position: relative; /* 相対位置 */
-        width: 75%; /* 画像の幅を親要素に合わせる */
-    }
     
-    .media-item {
-        width: 75%; /* 画像の幅を親要素に合わせる */
-        height: auto; /* オリジナルの縦横比を維持 */
-    }
+    
+  
     
   
     
@@ -167,32 +160,39 @@ h1{
 }
 
     .media-title {
-        position: absolute;
-        bottom: 10px; /* 下部からの位置調整 */
-        left: 10px; /* 左部からの位置調整 */
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            white-space: nowrap; /* テキストを一行で折り返さないように */
-            overflow: hidden; /* 内容がはみ出た場合は表示しない */
-            text-overflow: ellipsis; /* 内容がはみ出た場合は省略記号で表示 */
-            /* その他のスタイル */
-        }
+     
+    position: absolute;
+    bottom: 10px; /* 下部からの位置調整 */
+    left: 10px; /* 左部からの位置調整 */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景色 */
+    padding: 5px; /* パディング */
+    border-radius: 5px; /* 角丸 */
+    white-space: nowrap; /* テキストを一行で折り返さないように */
+    overflow: hidden; /* 内容がはみ出た場合は表示しない */
+    text-overflow: ellipsis; /* 内容がはみ出た場合は省略記号で表示 */
+}
+
+        
         
         .card-container {
             display: flex; /* カードを横並びにする */
             flex-wrap: wrap; /* カードが行を超えた場合に折り返す */
-            justify-content: space-between; /* カードを左右に均等に配置 */
+           
             max-width: 100%; /* 画像の幅が親要素に合わせて調整される */
             height: auto; /* アスペクト比を保持しつつ、高さは自動調整される */
-            
-            
-        }
-      
-.card {
-    position: relative; /* 相対位置 */
+   			 justify-content: center; /* 要素を中央配置 */
 }
+
+   
+    
+      
+  
+      
+
 
 
         
@@ -207,52 +207,77 @@ h1{
 
 .media {
     position: relative; /* 相対位置 */
+    
 }
 
 a{
     display: block;
 }
+
+
+   /* iframeを中央配置するためのスタイル */
+        #centered-iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto; /* ページ全体の高さを自動調整 */
+            padding: 20px; /* 必要な場合は適切なパディングを追加 */
+        }
+
+        /* iframeを画面幅いっぱいに広げる */
+        #centered-iframe {
+            width: 100%;
+            max-width: 800px; /* 幅の最大値を設定 */
+            height: 600px;
+        }
+
+        /* スマートフォンの場合、高さを自動調整する */
+        @media only screen and (max-width: 600px) {
+            #centered-iframe {
+                height: auto;
+            }
+        }
 /* カレンダー全体のスタイル */
-#calendar {
-    width: 100%;
-    border-collapse: collapse;
-}
+/*#calendar {*/
+/*    width: 100%;*/
+/*    border-collapse: collapse;*/
+/*}*/
 
 /* カレンダーのヘッダーのスタイル */
-#calendar thead th {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-}
+/*#calendar thead th {*/
+/*    padding: 10px;*/
+/*    text-align: center;*/
+/*    border: 1px solid #ccc;*/
+/*}*/
 
 /* カレンダーの日付セルのスタイル */
-#calendar tbody td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-}
+/*#calendar tbody td {*/
+/*    padding: 10px;*/
+/*    text-align: center;*/
+/*    border: 1px solid #ccc;*/
+/*}*/
 
 /* 今日の日付のスタイル */
-#calendar tbody .today {
-    background-color: #ffd700; /* イエロー */
-    font-weight: bold;
-}
+/*#calendar tbody .today {*/
+/*    background-color: #ffd700;  イエロー */
+/*    font-weight: bold;*/
+/*}*/
 
 /* 選択された日付のスタイル */
-.fc-day-selected {
-    background-color: #6495ED; /* コーンフラワーブルー */
-    color: #fff;
-}
+/*.fc-day-selected {*/
+/*    background-color: #6495ED;  コーンフラワーブルー */
+/*    color: #fff;*/
+/*}*/
 
 /* イベントのスタイル */
-.fc-event {
-    background-color: #32CD32; /* ライムグリーン */
-    color: #fff;
-    border: 1px solid #228B22; /* フォレストグリーン */
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 5px;
-}
+/*.fc-event {*/
+/*    background-color: #32CD32;  ライムグリーン */
+/*    color: #fff;*/
+/*    border: 1px solid #228B22;  フォレストグリーン */
+/*    border-radius: 5px;*/
+/*    padding: 5px;*/
+/*    margin-bottom: 5px;*/
+/*}*/
 
 
 
