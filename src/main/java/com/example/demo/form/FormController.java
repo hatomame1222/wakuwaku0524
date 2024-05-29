@@ -54,6 +54,7 @@ public class FormController {
 		return "form/input";
 	}
 
+
 	
 //			//削除(DELETE)
 //			@RequestMapping("/del/{id}")
@@ -96,12 +97,13 @@ public class FormController {
 	    
 
 
-	@RequestMapping("/top")
-	public String top1(Form form2) {
 	
-		return "form/top1";
-		
-	}
+	
+  	@RequestMapping("/top")
+  	public String top1(Form form2) {
+  			return "form/top1"; // HTMLファイルの名前を返す
 }
+}
+
 	
 	
