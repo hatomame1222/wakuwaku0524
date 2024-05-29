@@ -18,12 +18,12 @@ public class FormController {
 		return "form/input";
 	}
 
-	@RequestMapping("/top")
-	public String top1(Form form2) {
 	
-		return "form/top1";
-		
-	}
+  	@RequestMapping("/top")
+  	public String top1(Form form2) {
+  			return "form/top1"; // HTMLファイルの名前を返す
 }
+}
+
 	
 	
