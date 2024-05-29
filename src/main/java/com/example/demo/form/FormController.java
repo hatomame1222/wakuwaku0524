@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.dao.SampleDao;
@@ -28,7 +27,28 @@ public class FormController {
 		return "form/keijiban";
 	}
 
+	@RequestMapping("/boardgame")
+	public String bordgame(Form form) {
+		return "form/boardgame";
+	}
 
+	@RequestMapping("/karaoke")
+	public String karaoke(Form form) {
+		return "form/karaoke";
+	}
+	@RequestMapping("/basketball")
+	public String basketball(Form form) {
+		return "form/basketball";
+	}
+	@RequestMapping("/football")
+	public String football(Form form) {
+		return "form/football";
+	}
+	@RequestMapping("/snowboard")
+	public String snowboard(Form form) {
+		return "form/snowboard";
+	}
+	
 	@PostMapping ("/add")
 	public String add(Model model,Form form){
 		EntForm entform = new EntForm();
