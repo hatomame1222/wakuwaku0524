@@ -1,6 +1,7 @@
 package com.example.demo.dao;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +21,7 @@ public class SampleDao {
 	}
 	//追加の処理
 	public void insertDb(EntForm entform) {
-		db.update("INSERT INTO sample (name,comment) VALUES(?,?)", entform.getName(),entform.getComment());
+		db.update("INSERT INTO sample (name, comment, datetime) VALUES (?, ?, ?)", entform.getName(),entform.getComment(),entform.getDatetime());
 	}
 	//	検索の処理
 		public List<EntForm> searchDb(){
@@ -42,6 +43,7 @@ public class SampleDao {
 				
 				entformdb.setName((String)result1.get("name"));
 				entformdb.setComment((String)result1.get("comment"));
+				entformdb.setDatetime((Date)result1.get("datetime"));
 				
 
 				//移し替えたデータを持ったentformdbを、resultDB2に入れる
@@ -76,6 +78,7 @@ public class SampleDao {
 					//id、nameのデータをentformdbに移す
 					entformdb.setName((String)result1.get("name"));
 					entformdb.setComment((String)result1.get("comment"));
+					entformdb.setDatetime((Date)result1.get("datetime"));
 					//移し替えたデータを持ったentformdbを、resultDB2に入れる
 					resultDb2.add(entformdb);
 				}
@@ -88,7 +91,7 @@ public class SampleDao {
 			//コンソールに表示
 			System.out.println("編集の実行");
 			//UPDATEを実行
-			db.update("UPDATE sample SET name = ? SET comment = ?",entform.getName(),entform.getComment());
+			db.update("UPDATE sample SET name = ?,comment = ?,datetime = ? WHERE id = ?",entform.getName(),entform.getComment(),entform.getDatetime(),id);
 		}
 }
 

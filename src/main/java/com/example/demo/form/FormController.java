@@ -1,13 +1,14 @@
 package com.example.demo.form;
 
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.dao.SampleDao;
@@ -34,6 +35,7 @@ public class FormController {
 		EntForm entform = new EntForm();
 		entform.setName(form.getName());
 		entform.setComment(form.getComment());
+		entform.setDatetime(new Date()); 
 		sampledao.insertDb(entform);
 		
 		List<EntForm> list = sampledao.searchDb();
@@ -41,6 +43,13 @@ public class FormController {
 		model.addAttribute("title","一覧ページ");
 		return "form/keijiban";
 	}
+	
+	//削除(DELETE)
+		@RequestMapping("/del/{id}")
+		public String destory(@PathVariable Long id) {
+			sampledao.deleteDb(id);
+			return "redirect:/keijiban";
+		}
 		
 //		@RequestMapping("/view")
 //		public String view(Model model) {
