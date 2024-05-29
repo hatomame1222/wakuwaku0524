@@ -4,293 +4,130 @@
     font-weight: 400;
     font-style: normal;
   } */
-  body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
+h1{
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
 }
-
-.gallery {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 10px;
-max-width: 600px;
-width: 100%;
-padding: 10px;
-box-sizing: border-box;
+   h2{
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    background-color: #F1E3E3;
+   }
+   h3{
+    font-size: 30px;
+   }
+    img{
+        border: none;
+        display: block;
+    }
+    h1,h2,h3{
+        margin: 0;
+    }
+    body {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #362E2B;
+    background-color: rgb(208, 209, 219); /* 透明度を含む背景色 */
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic", sans-serif;
 }
-
-.gallery-item {
-background-color: #fff;
-border: 1px solid #ccc;
-border-radius: 5px;
-overflow: hidden;
-}
-
-.gallery-item img {
-width: 100%;
-height: auto;
-display: block;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-.gallery {
-grid-template-columns: repeat(2, 1fr); /* スマホでも2列表示を維持 */
-}
-}
-/*h1{*/
-/*    font-family: "Zen Kurenaido", sans-serif;*/
-/*    font-weight: 400;*/
-/*    font-style: normal;*/
-/*    font-size: 45px;*/
-/*}*/
-/*   h2{*/
-/*    font-family: "Zen Kurenaido", sans-serif;*/
-/*    font-weight: 400;*/
-/*    font-style: normal;*/
-/*    font-size: 30px;*/
-/*    background-color: #f1e3e3;*/
-/*   }     */
-/*   h3{*/
-/*    font-size: 30px;*/
-/*   }*/
-
-/*    img{*/
-/*        border: none;*/
-/*        display: block;*/
-/*    }*/
-    
-/*    h1,h2,h3{*/
-/*        margin: 0;*/
-/*    }*/
-   
-/*    body {*/
-/*    font-size: 20px;*/
-/*    line-height: 1.7;*/
-/*    color: #362e2b;*/
-/*    background-color: rgb(208, 209, 219);  透明度を含む背景色 */
-/*    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic", sans-serif;*/
-/*}*/
-
-    
-/*    .search-container {*/
-/*        float: right;*/
-/*      }*/
-/*      .search-container input[type=text] {*/
-/*        padding: 6px;*/
-/*        margin-top: 8px;*/
-/*        font-size: 17px;*/
-/*        border: none;*/
-/*      }*/
-/*      .search-container button {*/
-/*        padding: 6px 10px;*/
-/*        margin-top: 8px;*/
-/*        margin-right: 16px;*/
-/*        background: #ddd;*/
-/*        font-size: 17px;*/
-/*        border: none;*/
-/*        cursor: pointer;*/
-/*      }*/
-/*      .search-container button:hover {*/
-/*        background: #ccc;*/
-/*      }*/
-      
-<<<<<<< HEAD
-/*    .search-container{*/
-/*        float: right;*/
-
-/*    }*/
-=======
-    
->>>>>>> 6263f0ea59ea583c73cfa443e40ce359748220b7
-
-/*    header {*/
-/*        background-color: rgba(122, 122, 226, 0.5);*/
-/*    }*/
-    
-<<<<<<< HEAD
-/*    input[type="text"] {*/
-/*        float: right;*/
-/*    }*/
-/*    input[type="image"] {*/
-/*        float: right;*/
-/*    }*/
-    
-    
-/*    .media-item{*/
-/*            width: 150px;*/
-/*            height: 150px;*/
-/*            object-fit: cover;  画像を正方形に維持するために追加 */
-=======
+    .search-container {
+        float: right;
+      }
+      .search-container input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+      }
+      .search-container button {
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+      .search-container button:hover {
+        background: #ccc;
+      }
+    header {
+        background-color: rgba(122, 122, 226, 0.5);
+    }
     input[type="text"] {
         float: right;
     }
-   
     .media-item{
             width: 75%; /* 画像の幅を親要素に合わせる */
         height: auto; /* オリジナルの縦横比を維持 */
             object-fit: cover; /* 画像を正方形に維持するために追加 */
->>>>>>> 6263f0ea59ea583c73cfa443e40ce359748220b7
-
-/*        margin-left: auto;*/
-/*        margin-right: auto;*/
-/*            margin-left: 0;  左詰め */
-/*            margin-right: auto;*/
-        
-/*    }*/
-
-<<<<<<< HEAD
-/*    .section{*/
-/*        color: #362e2b;*/
-/*    }*/
-/*    .component-cards{*/
-/*        color: #362e2b;*/
-/*    }*/
-/*    .card{*/
-/*        color: #362e2b;*/
-/*        display: flex;*/
-/*        font-size: 15px;*/
-        
-/*    }*/
-
-/*    .image{*/
-/*        color: #362e2b;*/
-/*    }*/
-/*    .card-container {*/
-/*        display: flex;*/
-/*        flex-wrap: wrap;  必要に応じて折り返し */
-/*    }*/
-    
-/*    .card {*/
-/*        flex: 100px;  フレックスアイテムの伸縮と最小・最大幅を指定 */
-/*        margin: 10px;  カード間の間隔を調整 */
-        
-/*    }*/
-    
-/*     以下、画像とタイトルのスタイル */
-/*    .image {*/
-/*        position: relative;  相対位置 */
-/*        width: 75%;  画像の幅を親要素に合わせる */
-/*    }*/
-    
-/*    .media-item {*/
-/*        width: 75%;  画像の幅を親要素に合わせる */
-/*        height: auto;  オリジナルの縦横比を維持 */
-/*    }*/
-=======
+        margin-left: auto;
+        margin-right: auto;
+            margin-left: 0; /* 左詰め */
+            margin-right: auto;
+    }
     .section{
-        color: #362e2b;
+        color: #362E2B;
     }
     .component-cards{
-        color: #362e2b;
+        color: #362E2B;
     }
     .card{
-        color: #362e2b;
+        color: #362E2B;
         display: flex;
         font-size: 15px;
         flex: 100px; /* フレックスアイテムの伸縮と最小・最大幅を指定 */
         margin: 10px; /* カード間の間隔を調整 */
     position: relative; /* 相対位置 */
-   
     display: inline-block; /* インラインブロック要素に変更 */
     margin-right: -4px; /* 右側の余白を調整 */
 }
-     
- 
-
     .image{
-        color: #362e2b;
+        color: #362E2B;
          position: relative; /* 相対位置 */
         width: 75%; /* 画像の幅を親要素に合わせる */
     position: relative;
-    color: #362e2b;
+    color: #362E2B;
     width: 75%;
 }
-
-   
-    
-    
-    
     /* 以下、画像とタイトルのスタイル */
-    
-    
-  
->>>>>>> 6263f0ea59ea583c73cfa443e40ce359748220b7
-    
-  
-    
-/* table {*/
-/*        width: 100%;*/
-/*        border-collapse: collapse;*/
-/*        color: #362e2b;*/
-/*        background-color: #f1e3e3;*/
-/*    }*/
-/*    th, td {*/
-/*        border: 1px solid #524d4d;*/
-/*        padding: 8px;*/
-/*        text-align: center;*/
-/*        background-color: #f1e3e3;*/
-/*    }*/
-/*    th {*/
-/*        background-color: #f2f2f2;*/
-        
-/*    }*/
-/*    ;*/
-
-/* .overlay-text {*/
-/*    position: absolute;  絶対位置 */
-/*    bottom: 0;  下端に配置 */
-/*    left: 0;  左端に配置 */
-/*    width: 100%;  幅を100%に */
-/*    background-color: rgba(0, 0, 0, 0.5);  半透明の背景色 */
-/*    color: white;  テキスト色 */
-/*    padding: 10px;  パディング */
-/*    text-align: center;  テキストを中央揃え */
-/*    font-weight: bold;  太字 */
-/*    font-size: 18px;  フォントサイズ */
-/*    box-sizing: border-box;  paddingが幅に含まれるように */
-/*    z-index: 1;  画像よりも上に配置 */
-/*    transform: translate(-50%, -50%);  中央揃え */
-/*    text-shadow: 100px 100px 40px rgba(0, 0, 0, 0.5);  テキストに影を付ける */
-/*}*/
-
-<<<<<<< HEAD
-/*    .media-title {*/
-/*        position: absolute;*/
-/*        bottom: 10px;  下部からの位置調整 */
-/*        left: 10px;  左部からの位置調整 */
-/*        color: white;*/
-/*        font-size: 18px;*/
-/*        font-weight: bold;*/
-/*        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
-/*            white-space: nowrap;  テキストを一行で折り返さないように */
-/*            overflow: hidden;  内容がはみ出た場合は表示しない */
-/*            text-overflow: ellipsis;  内容がはみ出た場合は省略記号で表示 */
-/*             その他のスタイル */
-/*        }*/
-        
-/*        .card-container {*/
-/*            display: flex;  カードを横並びにする */
-/*            flex-wrap: wrap;  カードが行を超えた場合に折り返す */
-/*            justify-content: space-between;  カードを左右に均等に配置 */
-/*            max-width: 100%;  画像の幅が親要素に合わせて調整される */
-/*            height: auto;  アスペクト比を保持しつつ、高さは自動調整される */
-            
-            
-/*        }*/
-      
-/*.card {*/
-/*    position: relative;  相対位置 */
-/*}*/
-=======
+ table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #362E2B;
+        background-color: #F1E3E3;
+    }
+    th, td {
+        border: 1px solid #524D4D;
+        padding: 8px;
+        text-align: center;
+        background-color: #F1E3E3;
+    }
+    th {
+        background-color: #F2F2F2;
+    }
+    ;
+ .overlay-text {
+    position: absolute; /* 絶対位置 */
+    bottom: 0; /* 下端に配置 */
+    left: 0; /* 左端に配置 */
+    width: 100%; /* 幅を100%に */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景色 */
+    color: white; /* テキスト色 */
+    padding: 10px; /* パディング */
+    text-align: center; /* テキストを中央揃え */
+    font-weight: bold; /* 太字 */
+    font-size: 18px; /* フォントサイズ */
+    box-sizing: border-box; /* paddingが幅に含まれるように */
+    z-index: 1; /* 画像よりも上に配置 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    text-shadow: 100px 100px 40px rgba(0, 0, 0, 0.5); /* テキストに影を付ける */
+}
     .media-title {
-     
     position: absolute;
     bottom: 10px; /* 下部からの位置調整 */
     left: 10px; /* 左部からの位置調整 */
@@ -305,57 +142,26 @@ grid-template-columns: repeat(2, 1fr); /* スマホでも2列表示を維持 */
     overflow: hidden; /* 内容がはみ出た場合は表示しない */
     text-overflow: ellipsis; /* 内容がはみ出た場合は省略記号で表示 */
 }
-
-        
-        
         .card-container {
             display: flex; /* カードを横並びにする */
             flex-wrap: wrap; /* カードが行を超えた場合に折り返す */
-           
             max-width: 100%; /* 画像の幅が親要素に合わせて調整される */
             height: auto; /* アスペクト比を保持しつつ、高さは自動調整される */
    			 justify-content: center; /* 要素を中央配置 */
 }
->>>>>>> 6263f0ea59ea583c73cfa443e40ce359748220b7
-
-   
-    
-      
-  
-      
-
-
-
-        
-       
-            
-/*   スマートフォンサイズ以下の場合に幅を100%に設定 */
-/*@media (max-width: 768px) {*/
-/*    selector {*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
-
-<<<<<<< HEAD
-/*.media {*/
-/*    position: relative;  相対位置 */
-/*}*/
-
-/*a{*/
-/*    display: block;*/
-/*}*/
-=======
+  /* スマートフォンサイズ以下の場合に幅を100%に設定 */
+@media (max-width: 768px) {
+    selector {
+        width: 100%;
+    }
+}
 .media {
     position: relative; /* 相対位置 */
-    
 }
-
 a{
     display: block;
 }
-
-
-   /* iframeを中央配置するためのスタイル */
+/* iframeを中央配置するためのスタイル */
         #centered-iframe-container {
             display: flex;
             justify-content: center;
@@ -363,66 +169,15 @@ a{
             height: auto; /* ページ全体の高さを自動調整 */
             padding: 20px; /* 必要な場合は適切なパディングを追加 */
         }
-
         /* iframeを画面幅いっぱいに広げる */
         #centered-iframe {
             width: 100%;
             max-width: 800px; /* 幅の最大値を設定 */
             height: 600px;
         }
-
         /* スマートフォンの場合、高さを自動調整する */
         @media only screen and (max-width: 600px) {
             #centered-iframe {
                 height: auto;
             }
         }
->>>>>>> 6263f0ea59ea583c73cfa443e40ce359748220b7
-/* カレンダー全体のスタイル */
-/*#calendar {*/
-/*    width: 100%;*/
-/*    border-collapse: collapse;*/
-/*}*/
-
-/* カレンダーのヘッダーのスタイル */
-/*#calendar thead th {*/
-/*    padding: 10px;*/
-/*    text-align: center;*/
-/*    border: 1px solid #ccc;*/
-/*}*/
-
-/* カレンダーの日付セルのスタイル */
-/*#calendar tbody td {*/
-/*    padding: 10px;*/
-/*    text-align: center;*/
-/*    border: 1px solid #ccc;*/
-/*}*/
-
-/* 今日の日付のスタイル */
-/*#calendar tbody .today {*/
-/*    background-color: #ffd700;  イエロー */
-/*    font-weight: bold;*/
-/*}*/
-
-/* 選択された日付のスタイル */
-/*.fc-day-selected {*/
-/*    background-color: #6495ED;  コーンフラワーブルー */
-/*    color: #fff;*/
-/*}*/
-
-/* イベントのスタイル */
-/*.fc-event {*/
-/*    background-color: #32CD32;  ライムグリーン */
-/*    color: #fff;*/
-/*    border: 1px solid #228B22;  フォレストグリーン */
-/*    border-radius: 5px;*/
-/*    padding: 5px;*/
-/*    margin-bottom: 5px;*/
-/*}*/
-
-
-
-    
-        
-    
-    
