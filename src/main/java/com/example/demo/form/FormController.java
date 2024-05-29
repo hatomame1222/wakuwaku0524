@@ -1,11 +1,13 @@
 package com.example.demo.form;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.dao.SampleDao;
@@ -51,6 +53,7 @@ public class FormController {
 	public String requestform(Form form1) {
 		return "form/input";
 	}
+
 	
 //			//削除(DELETE)
 //			@RequestMapping("/del/{id}")
@@ -92,4 +95,13 @@ public class FormController {
 
 	    
 
+
+	@RequestMapping("/top")
+	public String top1(Form form2) {
+	
+		return "form/top1";
+		
+	}
 }
+	
+	
