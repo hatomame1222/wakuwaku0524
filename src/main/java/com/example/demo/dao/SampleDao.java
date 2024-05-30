@@ -25,7 +25,7 @@ public class SampleDao {
 	}
 	//	検索の処理
 		public List<EntForm> searchDb(){
-			String sql = "SELECT * FROM sample";
+			String sql = "SELECT * FROM sample WHERE id <> 1";
 
 			//データベースから取り出したデータをresultDB1に入れる
 			List<Map<String, Object>> resultDb1 = db.queryForList(sql);
