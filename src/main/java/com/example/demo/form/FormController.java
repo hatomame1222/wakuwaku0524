@@ -86,4 +86,9 @@ public class FormController {
     public String top1(Form form2) {
         return "form/top1"; // HTMLファイルの名前を返す
     }
+    
+    @RequestMapping("/complete")
+    public String complete(Form form3) {
+        return "form/complete";
+    }
 }
