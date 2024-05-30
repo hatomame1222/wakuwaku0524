@@ -1,65 +1,136 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
+	
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>謎解き部</title>
     <link href="style2.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-    <section>
-        <header>
-            <a href="/top" class="back-button">戻る</a>
-            <img src="logo.jpg" alt="サイトのロゴ">
-            <div class="search-container">
-                <form action="/search" method="get">
-                    <input type="text" placeholder="検索..." name="q">
-                    <button type="submit">検索</button>
-                </form>
-            </div>
-            <h1>謎解き部</h1>
-            <img src="/images/nazotoki.jpg" width="948" height="340" alt="謎解き部">
-        </header>
-        <h2>部活の紹介</h2>
-        <p>具体的な活動は・・・</p>
-        <h2>部員数</h2>
-        <p>部員：</p>
-        <h2>活動場所</h2>
-        <p>活動場所をここに入力</p>
-        <div class="gmap">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1362.5128186665395!2d139.73480808667932!3d35.68636070363882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c63c3955555%3A0xccd3a5172874bd51!2z44ix44K744OW44OzJuOCouOCpO-9peODjeODg-ODiOODoeODh-OCo-OCog!5e0!3m2!1sja!2sjp!4v1716794721317!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <h2>お問い合わせ先</h2>
-        <p>お問い合わせ先をここに入力</p>
-    </section>
-    <section>
-        <h2>入部について</h2>
-        <p>入部希望の方はこちらから:</p>
-        <a href="/form" target="_blank">入部希望届フォームへ</a>   
-    </section>
-    <section>
-        <h2>コメント欄</h2>
-        <form th:action="@{/add}" method="post">
-            <p>名前：<input type="text" name="name" th:value="*{name}"></p>
-            <p>コメント：<input type="text" name="comment" th:value="*{comment}"></p>
-            <input type="submit" value="送信">
-        </form>
-        <table>
-            <tr th:each="res: ${dbList}">
-                <td th:text="${res.id}">id</td>
-                <td th:text="${res.name}">名前</td>
-                <td th:text="${res.comment}">コメント</td>
-                <td th:text="${res.datetime}">時刻</td>
-                <td>
-                    <form th:action="@{/del/{id}(id=${res.id})}" method="post">
-                        <input type="submit" value="削除" />
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </section>
-    <footer>
-        <p>&copy; 2024 部活動名. All rights reserved.</p>
-    </footer>
+
+<body class="page-done">
+
+	<div class="global-wrapper">
+<header>
+	<!-- 戻るボタン -->
+	<a href="/top" class="back-button">戻る</a>
+<!--	 ロゴの写真 -->
+<!--	<img src="logo.jpg" alt="サイトのロゴ">-->
+	<div class="header-text">wakuwaku</div>
+<!--            <div class="search-container">-->
+<!--                <form action="/search" method="get">-->
+<!--                    <input type="text" placeholder="検索..." name="q">-->
+<!--                    <button type="submit">検索</button>-->
+<!--                </form>-->
+<!--            </div>-->
+</header>
+<main class="main">
+	<div class="header-section">
+		<div class="component-hero narrow">
+			<div class="media image-landscape" data-imagecover>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="page-wrapper">
+		<h1>
+		謎解き部
+		</h1>
+			<div class="section">
+				<div class="department-page_header">
+					<div class="image">
+						<div class="media image-landscape" data-imagecover>
+						<img src="/images/nazotoki.jpg" alt="謎解き部" class="media-item">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="page-wrapper">
+		<h2>
+		部活の紹介
+		</h2>
+		<p>
+		部活の紹介の文章がここに入ります。・・・・
+		</p>
+		</div>
+	</div>
+	<div class="section">
+		<div class="page-wrapper">
+			<h2>
+			部員数
+			</h2>
+			<p>
+			部員数の文章がここに入ります。・・・・
+			</p>
+		</div>
+	</div>
+	<div class="section">
+		<div class="page-wrapper">
+			<h2>
+			活動場所
+			</h2>
+			<p>
+			活動場所の文章がここに入ります。・・・・
+			</p>
+			<div class="gmap">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1362.5128186665395!2d139.73480808667932!3d35.68636070363882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c63c3955555%3A0xccd3a5172874bd51!2z44ix44K744OW44OzJuOCouOCpO-9peODjeODg-ODiOODoeODh-OCo-OCog!5e0!3m2!1sja!2sjp!4v1716794721317!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="page-wrapper">
+			<h2>
+			お問い合わせ先
+			</h2>
+			<p>お問い合わせ先をここに入力・・・</p>
+		</div>
+	</div>
+	<div class="section">
+		<div class="page-wrapper">
+			<h2>
+			入部について
+			</h2>
+			<p>
+			入部希望の方はこちらから
+			</p>
+			<a href="/form" target="_blank">入部希望届フォームへ</a>
+		</div>
+	</div>   
+       
+		<h2>コメント欄</h2>
+		<form th:action="@{/add}" method="post">
+			<div>
+				<label for="name">名前:</label>
+				<input type="text" name="name" th:value="*{name}" required>
+			</div>
+			<label for="comment">メッセージ:</label>
+			<textarea id="comment" name="comment" th:value="*{comment}" rows="4" required></textarea>
+			<button type="submit">投稿</button>
+			
+		</form>
+		
+		
+		 <div id="posts">
+		        <h2>投稿一覧</h2>
+		        
+		        <div th:each="res : ${dbList}" >
+					<form th:action="@{/del/{id}(id=${res.id})}" method="post">
+		            <p><strong>名前:</strong> <span th:text="${res.name}"></span></p>
+		            <p><strong>メッセージ:</strong> <span th:text="${res.comment}"></span></p>
+		            <p><em>投稿日:</em> <span th:text="${res.datetime}"></span></p>
+					<button type="submit">削除</button>
+					</form>
+		        </div>
+				
+		 </div>
+	</main>
+	<footer>
+	        <p>&copy; 2024 部活動名. All rights reserved.</p>
+	    </footer>
+	</div>
+    
 </body>
 </html>
