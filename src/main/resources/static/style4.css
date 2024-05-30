@@ -5,14 +5,14 @@
     font-style: normal;
   } */
 h1{
-    font-family: "Zen Kurenaido", sans-serif;
-    font-weight: 400;
+    /*font-family: "Zen Kurenaido", sans-serif;*/
+    /*font-weight: 400;*/
     font-style: normal;
     font-size: 45px;
 }
    h2{
-    font-family: "Zen Kurenaido", sans-serif;
-    font-weight: 400;
+    /*font-family: "Zen Kurenaido", sans-serif;*/
+    /*font-weight: 400;*/
     font-style: normal;
     font-size: 30px;
     background-color: #F1E3E3;
@@ -30,7 +30,7 @@ h1{
     body {
     font-size: 20px;
     line-height: 1.7;
-    color: #362E2B;
+    color: #333;
     background-color: rgb(208, 209, 219); /* 透明度を含む背景色 */
     font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic", sans-serif;
 }
@@ -71,10 +71,10 @@ h1{
             margin-right: auto;
     }
     .section{
-        color: #362E2B;
+        color: #333;
     }
     .component-cards{
-        color: #362E2B;
+        color: #333;
     }
     .card{
         color: #362E2B;
