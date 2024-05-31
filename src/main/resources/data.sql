@@ -1,1 +1,1 @@
-INSERT INTO sample (name,comment) VALUES ('名前','コメント');
+INSERT INTO sample (name,comment)VALUES ('','');
